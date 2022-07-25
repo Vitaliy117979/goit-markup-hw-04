@@ -7,9 +7,6 @@
 
 .body {
   font-family: "Roboto", sans-serif;
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 h1,
@@ -61,7 +58,7 @@ a {
 .header-nav {
   display: flex;
   align-items: center;
-  margin-right: 331px;
+  margin-right: auto;
 }
 
 /* Логотип */
@@ -151,12 +148,12 @@ a {
   list-style-type: none;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 
 .header-contacts-link {
-  width: 161px;
-  height: 16px;
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
@@ -173,15 +170,8 @@ a {
   color: #2196f3;
 }
 
-.h-contacts-item {
-  display: flex;
-  flex-wrap: nowrap;
-  max-width: 161px;
-  height: 16px;
-  
-}
-
-.header-svg{
+.header-svg {
+  fill: currentColor;
   margin-right: 10px;
 }
 
@@ -194,7 +184,11 @@ a {
   margin-right: auto;
   margin-left: auto;
 
-  background-image: url(../images/hero-bg-img/Img.png);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-img/img.jpg);
 
   background-repeat: no-repeat;
   background-position: center;
@@ -247,8 +241,11 @@ a {
   background-color: #f5f4fa;
   border-radius: 4px;
   width: 270px;
-  padding: 25px 100px;
+  height: 120px;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-set {
@@ -304,7 +301,7 @@ a {
   display: block;
 }
 
-/* Наша комонда */
+/* Наша комaнда */
 
 .work-section {
   background-color: #f5f4fa;
@@ -385,10 +382,10 @@ a {
   background-color: #2196f3;
 }
 
-.social-net-svg:focus {
+.div-social-net .link:focus .social-net-svg {
   fill: #ffffff;
 }
-.social-net-svg:hover {
+.div-social-net .link:hover .social-net-svg {
   fill: #ffffff;
 }
 
@@ -509,19 +506,28 @@ a {
   flex-wrap: wrap;
 }
 
-.our-customers-svg {
-  fill: #afb1b8;
-  width: 170px;
-  outline: 1px solid #afb1b8;
+.our-customers-link:hover .our-customers-svg{
+  fill: #2196f3;
 }
 
-.our-customers-link:focus {
-  fill: #2196f3;
-  border: 1px solid #2196f3;
+.our-customers-svg {
+  fill: #afb1b8;
 }
+
+.our-customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+
 .our-customers-link:hover {
-  fill: #2196f3;
-  outline: 1px solid #2196f3;
+  
+ border: 1px solid #2196f3;
 }
 
 /* footer */
@@ -529,6 +535,15 @@ a {
 .footer {
   padding: 60px 0;
   background-color: #2f303a;
+}
+
+.footer-conteiner{
+  display: flex;
+  align-items: baseline;
+}
+
+.first-conteiner{
+  margin-right: 70px;
 }
 
 .logo-footer {
@@ -551,10 +566,6 @@ a {
   margin-bottom: 20px;
 }
 
-.footer-group {
-  display: flex;
-  gap: 70px;
-}
 
 .residence-address {
   font-size: 14px;
@@ -582,7 +593,7 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
-  width: 144px;
+  
 }
 
 .footer-link {
